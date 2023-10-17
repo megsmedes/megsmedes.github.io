@@ -29,9 +29,35 @@ var eggs = 11
 checkTheEggs(eggs) //change name carton to name eggs and call
 eggs = buyeggs(eggs) //use function buyeggs to buy more eggs
 checkTheEggs(eggs) //call the eggs again
-
-
-
   </script>
+
+  <script>
+	//html
+	<button id = "myButton">
+	Press me!
+	</button>
+	<p id=paragraph></p>
+
+	<button id = "myButton2">
+	Don't press me!
+	</button>
+	<p id=paragraph2></p>
+	$("#myButton")
+	
+	//javascript
+	.click(function(){
+	$("#paragraph").text("You pressed it!");
+	}) //inside curly bracket is what will run if button is pressed
+
+	$("#myButton2")
+	.hover(function(){
+	$("#paragraph2").text("Don't you dare press it!");
+	}) //inside curly bracket is what will run if button is pressed
+
+	$("#myButton2")
+	.click(function(){
+	$("#paragraph2").text("You've angered the button monster!");
+	}) 
+    </script>	
  </head>
 </html> 
