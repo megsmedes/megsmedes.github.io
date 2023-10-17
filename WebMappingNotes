@@ -3,8 +3,35 @@
  <head>
   <title> Notes for Web Mapping </title>
   <script>
-    chickens=["Hershey", "Coco", "Potato", "Lemon"];
-    document.write(chickens[3])
-    for(name of chickens){document.write("<p>" + name + "</p>")}
+    //how to create and call Arrays:
+    chickens=["Hershey", "Coco", "Potato", "Lemon"]; //create a list
+    document.write(chickens[3]) //test by calling a chicken by number. list starts with 0.
+    for(name of chickens){document.write("<p>" + name + "</p>")} //produce a list of chickens
+
+    //how to create and call functions:
+    function checkTheEggs(carton){
+      if (carton == 12) {
+	     document.write("We have 12 eggs!");}
+
+      if (carton < 12) {
+	     document.write("We need to buy more eggs.");}  
+  
+      if (carton > 12) {
+	     document.write("We don't need eggs.")} 
+  	}
+
+checkTheEggs(11)  //call the eggs using function above
+function buyeggs(carton) {
+	return(carton + 1);
+} //tell how many eggs to buy
+
+var eggs = 11
+checkTheEggs(eggs) //change name carton to name eggs and call
+eggs = buyeggs(eggs) //use function buyeggs to buy more eggs
+checkTheEggs(eggs) //call the eggs again
+
+
+
+  </script>
  </head>
 </html> 
