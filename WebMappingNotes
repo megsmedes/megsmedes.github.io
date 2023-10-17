@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+ <head>
+  <title> Notes for Web Mapping </title>
+  <script>
+    chickens=["Hershey", "Coco", "Potato", "Lemon"];
+    document.write(chickens[3])
+    for(name of chickens){document.write("<p>" + name + "</p>")}
+ </head>
+</html> 
