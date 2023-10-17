@@ -88,7 +88,14 @@
      #table tr:nth-child(even) {background-color: #FFF0F5;}   
   
   </style>
+    
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>  //This is where I have my javascript.
+      $(document).ready ( function() {
+          $("button0").click( function(){
+              $("#plant0").text("Rose Hips");
+          })
+  </script>  
   <head>
     <div class="title">
         <title >Making Tea from the Garden.</title>
@@ -182,7 +189,9 @@
           <th scope="row"> Herbs</th>
           <th scope="row"> Uses</th>
           <tr>
-            <td>Rose Hips</td>
+            <td><button id="button0">Guess the Plant></button>  
+            <p id=plant0></p></td>    
+            //<td>Rose Hips</td>
             <td>High in vitamin C, adds flavor.</td>
           </tr>
           <tr>
@@ -214,7 +223,7 @@
        <p><a href="https://seedtopantryschool.com/grow-harvest-preserve-echinacea/">Echinacea</a></p>
        <p><a href="https://steemit.com/garden/@raincountry/woolly-lamb-s-ear-tea/">Lamb's Ear</a></p>
 
-      <p>This page is authored by Meghan Smedes, Last updated October 14, 2023.</p>
+      <p>This page is authored by Meghan Smedes, Last updated October 14, 2023. Lab 6 for Web Mapping. </p>
     </div>  
     </body>
 </html>
