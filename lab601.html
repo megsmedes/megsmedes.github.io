@@ -96,6 +96,11 @@
               $("#hidden_text0").text("Rose Hips");
            console.log("pressed button 0");   
           })
+          $("#photo0").click( function() {
+           // if someone clicks on photo0, this runs!
+           $("img").toggle();
+        });
+
            $("#button1").click( function(){
               $("#hidden_text1").text("Echinacea");
            console.log("pressed button 1");   
@@ -214,13 +219,22 @@
         <table id="table">
           <th scope="row"> Herbs</th>
           <th scope="row"> Uses</th>
+          <th scope="row"> Photos</th>  
           <tr>
             <td>
                 <div id="hidden_text0">
-                <button id="button0">Guess the Plant</button>   
+                <button id="button0">Guess the Plant</button>       
                 </div>    
             </td>
             <td>High in vitamin C, adds flavor.</td>
+            <td>
+                <div id=>
+                <button id ="photo0">Photo</button>
+                    <img id="photo0" src="...jpg" />
+
+                    $("#photo0").toggle();
+                </div>    
+            </td>  
           </tr>
           <tr>
             <td>
