@@ -93,7 +93,7 @@
   <script>  //This is where I have my javascript.
       $(document).ready ( function() {
           $("#button0").click( function(){
-              $("#button0").html("Rose Hips");
+              $("#hidden_text0").text("Rose Hips");
            console.log("pressed button 0");   
           })
            $("#button1").click( function(){
@@ -215,7 +215,10 @@
           <th scope="row"> Herbs</th>
           <th scope="row"> Uses</th>
           <tr>
-            <td><button id="button0">Guess the Plant</button>   
+            <td>
+                <div id="hidden_text0">
+                <button id="button0">Guess the Plant</button>   
+                </div>    
             </td>
             <td>High in vitamin C, adds flavor.</td>
           </tr>
@@ -253,7 +256,7 @@
      <H4>Websites with more information:</H4>
        <p><a href="https://seedtopantryschool.com/grow-harvest-preserve-echinacea/">Echinacea</a></p>
        <p><a href="https://steemit.com/garden/@raincountry/woolly-lamb-s-ear-tea/">Lamb's Ear</a></p>
-
+       <p><a href="http://falcon.com/books/9781493060139">Medicinal Herbs of the Rocky Mountains</a></p>
       <p>This page is authored by Meghan Smedes, Last updated October 14, 2023. Lab 6 for Web Mapping. </p>
     </div>  
     </body>
