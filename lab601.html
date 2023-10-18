@@ -40,6 +40,7 @@
               padding: 8px;
               display: block;
               margin: auto;}
+    #photo0 {height: 10%; width: 10%}    
     p, li {font-size: 14px; 
               font-family: Garamond, Georgia, sans-serif;}
     td, th    {font-size: 24px; 
@@ -97,7 +98,8 @@
            console.log("pressed button 0");   
           })
           $("#button10").click( function() {
-           $("#photo0").toggle();
+              $("#hidden_photo0").
+           $("#photo0").toggle(<img id="photo0" src="RoseHips.jpg" />);
         });
 
            $("#button1").click( function(){
@@ -227,7 +229,7 @@
             </td>
             <td>High in vitamin C, adds flavor.</td>
             <td>
-                <div id=>
+                <div id="hidden_photo0>
                 <button id ="button10">Photo</button>
                     <img id="photo0" src="RoseHips.jpg" />
                 </div>    
