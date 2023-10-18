@@ -40,7 +40,13 @@
               padding: 8px;
               display: block;
               margin: auto;}
-    #photo0 {height: 25%; width: 25%}    
+    #photo10 {height: 25%; width: 25%} 
+    #photo11 {height: 25%; width: 25%} 
+    #photo12 {height: 50%; width: 50%} 
+    #photo13 {height: 25%; width: 25%} 
+    #photo14 {height: 25%; width: 25%} 
+    #photo15 {height: 25%; width: 25%} 
+    #photo16 {height: 25%; width: 25%} 
     p, li {font-size: 14px; 
               font-family: Garamond, Georgia, sans-serif;}
     td, th    {font-size: 24px; 
@@ -98,7 +104,7 @@
            console.log("pressed button 0");   
           })
           $("#button10").click( function() {
-              $("#photo0").fadeToggle();
+              $("#photo10").fadeToggle();
               console.log("pressed button 10");
           });
 
@@ -106,26 +112,50 @@
               $("#hidden_text1").text("Echinacea");
            console.log("pressed button 1");   
           })
+          $("#button11").click( function() {
+              $("#photo11").fadeToggle();
+              console.log("pressed button 11");
+          });
           $("#button2").click( function(){
               $("#hidden_text2").text("Cat Nip");
            console.log("pressed button 2");   
           })
+          $("#button12").click( function() {
+              $("#photo12").fadeToggle();
+              console.log("pressed button 12");
+          });
           $("#button3").click( function(){
               $("#hidden_text3").text("Feverfew");
            console.log("pressed button 3");   
           })
+          $("#button13").click( function() {
+              $("#photo13").fadeToggle();
+              console.log("pressed button 13");
+          });
           $("#button4").click( function(){
               $("#hidden_text4").text("Lamb's Ear");
            console.log("pressed button 4");   
           })
+          $("#button14").click( function() {
+              $("#photo14").fadeToggle();
+              console.log("pressed button 14");
+          });
          $("#button5").click( function(){
               $("#hidden_text5").text("Raspberry Leaf");
            console.log("pressed button 5");   
           })
+          $("#button15").click( function() {
+              $("#photo15").fadeToggle();
+              console.log("pressed button 15");
+          });
           $("#button6").click( function(){
               $("#hidden_text6").text("Kinnikinnick");
            console.log("pressed button 6");   
           })
+          $("#button16").click( function() {
+              $("#photo16").fadeToggle();
+              console.log("pressed button 16");
+          });
       })
   </script>  
   <head>
@@ -231,7 +261,7 @@
             <td>
                <div>
                  <button id = "button10"> Show/Hide </button>
-                 <img id="photo0" src="RoseHips.jpg"/>
+                 <img id="photo10" src="RoseHips.jpg"/>
                </div> 
             </td>  
           </tr>
@@ -245,7 +275,7 @@
             <td>  
              <div>
                  <button id = "button11"> Show/Hide </button>
-                 <img id="photo1" src="Echinacea.jpg"/>
+                 <img id="photo11" src="Echinacea.jpg"/>
                </div> 
             </td>    
           </tr>
@@ -259,7 +289,7 @@
             <td>  
                <div>
                  <button id = "button12"> Show/Hide </button>
-                 <img id="photo2" src="Cat_Nip.jpg"/>
+                 <img id="photo12" src="Cat_Nip.jpg"/>
                </div> 
             </td>      
           </tr>
@@ -273,7 +303,7 @@
             <td>  
              <div>
                  <button id = "button13"> Show/Hide </button>
-                 <img id="photo3" src="Feverfew.jpg"/>
+                 <img id="photo13" src="Feverfew.jpg"/>
                </div> 
             </td>      
           </tr>   
@@ -287,7 +317,7 @@
             <td>  
              <div>
                  <button id = "button14"> Show/Hide </button>
-                 <img id="photo4" src="Echinacea.jpg"/>
+                 <img id="photo14" src="Lambs_Ear_med_quality.jpg"/>
                </div> 
             </td>      
           </tr>
@@ -296,16 +326,28 @@
                 <div id="hidden_text5">
                   <button id="button5">Guess the Plant</button>  
                 </div>    
-            </td> 
+              </td> 
               <td>Ease cramping during periods and labor.  Regulate Menstruation.</td>
+              <td>  
+                <div>
+                     <button id = "button15"> Show/Hide </button>
+                     <img id="photo15" src="raspberr_med_quality.jpg"/>
+                </div> 
+              </td>   
           </tr>  
            <tr>
                <td>
                 <div id="hidden_text6">
                    <button id="button6">Guess the Plant</button>   
                 </div>    
-            </td> 
+               </td> 
                <td>Help for UTI's and swelling. Cleanses mouth sores.</td>
+                <td>  
+                     <div>
+                         <button id = "button16"> Show/Hide </button>
+                         <img id="photo16" src="Kinnikinnik_med_quality.jpg"/>
+                     </div> 
+                </td>   
            </tr> 
         </table>
      <H4>Websites with more information:</H4>
