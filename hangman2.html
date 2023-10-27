@@ -13,6 +13,8 @@
               font-color: red;
               background-color: yellow; 
             }
+      #photo {height: 50%;
+              width: 50%;}
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
@@ -94,7 +96,8 @@
                       // check if the player has won the game
                         if (! blank.includes("-")) {
                         gameWon = true;
-                        $("#info").text("You WON! Great job!");}
+                        $("#info").text("You WON! Great job!");
+                        $("#photo")}
                     }
 
                     // add the letter to letters already tried
@@ -141,7 +144,7 @@
      <span class="letter" id="x">x</span>
      <span class="letter" id="y">y</span>
      <span class="letter" id="z">z</span>  
-     <img id = "photo" src = "http://cliparts.co/cliparts/8iz/KnB/8izKnBobT.jpg" alt = You won a pot of gold!/>
+     <img id = "photo" src = "potofgold2.jpg" alt = You won a pot of gold!/>
      </div>
   </body>
 </html>
