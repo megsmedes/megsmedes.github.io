@@ -44,7 +44,8 @@
                   // check if the game has been won or lost
                   if (gameWon != true && gameLost != true) {
                     // erase the info box
-                    $("#info").text(""); $("#photo").hide()
+                    $("#info").text(""); $("#photo").hide();
+                   console.log("game not lost nor won", )
 
                      
        
@@ -76,6 +77,7 @@
                         gameLost=true;
                         $("#info").text("Sorry, you're out of guesses. YOU LOSE!"); 
                         $("#photo").hide()
+                        console.log("game lost", )
                       }
                     
                     // otherwise, put a line through it and
@@ -104,6 +106,7 @@
                         gameWon = true;
                         $("#info").text("You WON the pot of gold!);                    
                         $("#photo").show();
+                         console.log("game won ",)
                         }
                       // This next line will just add it to the <body> tag
                          document.body.appendChild(img); 
