@@ -1,7 +1,7 @@
- <!doctype html>
+<!doctype html>
 <html>
   <head>
-    <title>Hangman!</title>
+    <title>PrehistoricWordGuess</title>
     <style>
       #alphabet { margin: auto;
                   padding: 20px; }
@@ -23,8 +23,8 @@
     <script>
          $(document).ready( function() {
               // this is the secret word!
-              word =  "l e p r e c h a u n";
-              blank = "- - - - - - - - - -";
+              word =  "p a c h y c e p h a l o s a u r u s";
+              blank = "- - - - - - - - - - - - - - - - - -";
               $("#word").text(blank);
 
               // this is the list of letters that have been tried
@@ -125,7 +125,7 @@
     </script>
   </head>
   <body>
-     <h1>Let's play Hangman!</h1>
+     <h1>Guess the Prehistoric Word!</h1>
      <div id="guesses"></div>
      <div id="info"></div>
      <div id="word"></div>
@@ -157,6 +157,6 @@
      <span class="letter" id="y">y</span>
      <span class="letter" id="z">z</span>  
      </div>
-   <img id = "photo", src="potofgold.jpg", alt = You found the pot of gold!/>
+   <img id = "photo", src="dinosaur.jpg", alt = You found the pot of gold!/>
   </body>
 </html>
