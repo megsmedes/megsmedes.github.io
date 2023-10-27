@@ -13,9 +13,8 @@
               font-color: red;
               background-color: yellow; 
             }
-      #photo {height: 50%;
-              width: 50%;}
     </style>
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
          $(document).ready( function() {
@@ -97,7 +96,15 @@
                         if (! blank.includes("-")) {
                         gameWon = true;
                         $("#info").text("You WON! Great job!");
-                        $("#photo")}
+                        function show_image(src, width, height, alt) {
+                           var img = document.createElement("img");
+                           img.src = "potofgold.jpg";
+                           img.width = 50%;
+                           img.height = 50%;
+                           img.alt = You found a pot of gold!;
+                        }
+                      // This next line will just add it to the <body> tag
+                         document.body.appendChild(img); 
                     }
 
                     // add the letter to letters already tried
@@ -144,7 +151,8 @@
      <span class="letter" id="x">x</span>
      <span class="letter" id="y">y</span>
      <span class="letter" id="z">z</span>  
-     <img id = "photo" src = "potofgold.jpg" alt = You won a pot of gold!/>
+     //<img id = "photo" src = "potofgold.jpg" alt = You won a pot of gold!/>
+      <a href="javascript: showImage()">potofgold.jpg</a> a
      </div>
   </body>
 </html>
