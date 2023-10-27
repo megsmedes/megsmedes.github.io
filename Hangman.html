@@ -68,7 +68,7 @@
                       if (tries < 1) {
                         gameLost=true;
                         $("#info).text("Sorry, you're out of guesses. YOU LOSE!");
-                    
+                      }
                     
                     // otherwise, put a line through it and
                     // add it to the found letters
@@ -79,6 +79,16 @@
                       // with the letter that was clicked on
                       // replace the blanks with letter in blank
                       // and replace the letters with blanks in word
+                      while (word.includes(letter)) {
+                        index = word.indexOf(letter);
+                        console.log("index of word is ", index);
+                        word = word.substring(0, index) + " " + word.substring((index+1));
+                        blank = blank.substring(0, index) + letter + blank.substring((index+1));
+
+                        $("#word").text(blank);
+                        console.log("word is ", work);
+                        console.log("blank is ", blank);
+                      }
 
                      
                       // check if the player has won the game
