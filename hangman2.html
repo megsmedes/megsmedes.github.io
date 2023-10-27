@@ -13,6 +13,10 @@
               font-color: red;
               background-color: yellow; 
             }
+     #photo {height: 25%;
+              width: 25%;
+             }
+
     </style>
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -95,7 +99,8 @@
                       // check if the player has won the game
                         if (! blank.includes("-")) {
                         gameWon = true;
-                        $("#info").text("http://megsmedes.github.io/potofgold.jpg");                    
+                        //$("#info").text("You WON!);                    
+                        $("#photo").click
                         }
                       // This next line will just add it to the <body> tag
                          document.body.appendChild(img); 
@@ -146,5 +151,6 @@
      <span class="letter" id="y">y</span>
      <span class="letter" id="z">z</span>  
      </div>
+   <img id = "photo"> src="potofgold.jpg" alt = You found the pot of gold!/>
   </body>
 </html>
