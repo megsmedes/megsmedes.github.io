@@ -44,7 +44,7 @@
                   // check if the game has been won or lost
                   if (gameWon != true && gameLost != true) {
                     // erase the info box
-                    $("#info").text("");
+                    $("#info").text(""); $("#photo").hide(function())
 
                 
                     // use text to get the letter that was clicked on
@@ -72,7 +72,8 @@
                       // are they out of tries? then they lost!
                       if (tries < 1) {
                         gameLost=true;
-                        $("#info").text("Sorry, you're out of guesses. YOU LOSE!");
+                        $("#info").text("Sorry, you're out of guesses. YOU LOSE!"); 
+                        $("#photo").hide(function())
                       }
                     
                     // otherwise, put a line through it and
@@ -100,7 +101,7 @@
                         if (! blank.includes("-")) {
                         gameWon = true;
                         //$("#info").text("You WON!);                    
-                        $("#photo").show
+                        $("#photo").show (function());
                         }
                       // This next line will just add it to the <body> tag
                          document.body.appendChild(img); 
