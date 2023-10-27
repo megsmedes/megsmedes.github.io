@@ -72,7 +72,7 @@
                       // are they out of tries? then they lost!
                       if (tries < 1) {
                         gameLost=true;
-                        $("#info").text("Uh oh, you're out of guesses. You've been CAUGHT!"); 
+                        $("#info").text("Uh oh, you're out of guesses. You've been CAPTURED!"); 
                         $("#photo").hide()
                         console.log("game lost", )
                       }
@@ -122,7 +122,7 @@
     </script>
   </head>
   <body>
-     <h1>Quick, guess the word before the Headless Horse Man gets you!</h1>
+     <h1>Hurry, guess the word before the Headless Horseman gets you!</h1>
      <div id="guesses"></div>
      <div id="info"></div>
      <div id="word"></div>
