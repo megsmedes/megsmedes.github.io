@@ -9,14 +9,15 @@
         #map{ height: 180px;}
     </style>
     
+  </head>
+  <body>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""> </script>
+
+      <div id="map"></div>
     
     <script>
-      //all of this js will be performed last    
-      $(document).ready ( function() {
-
         //define map for calling later and set lat, long
         var map = L.map('map').setView([51.505, -0.09], 13);
 
@@ -30,10 +31,6 @@
         var marker = L.marker([51.5, -0.09]).addTo(map);
 }
     </script>
-  </head>
-  <body>
-    <div id="map">
-    </div>
    
   </body>
 </html>
