@@ -19,7 +19,7 @@
     
     <script>
         //define map for calling later and set lat, long
-        var map = L.map('map').setView([53.153, -6.909], 15);
+        var map = L.map('map').setView([53.153, -6.909], 14);
 
         //giving map an Open Street Map tilelayer
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -30,7 +30,11 @@
         //add a marker
         var marker = L.marker([53.15785, -6.91137]).addTo(map);
         marker.bindPopup("<b>St. Brigid's Cathedral</b><br>Kildare, Ireland.").openPopup();
-       
+
+      //add a marker
+        var marker = L.marker([53.15708, -6.91044]).addTo(map);
+        marker.bindPopup("<b>St. Brigid's Flame Sculpture</b><br>Kildare Tourist Office and Heritage Center.").openPopup();
+      
       //add a circle 
        var circle = L.circle([53.14300, -6.90746], {
         color: 'red',
