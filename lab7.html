@@ -6,7 +6,7 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""/>
     <style>
-        #map{ width: 700px; height: 800px;}
+        #map{ width: 700px; height: 900px;}
     </style>
     
   </head>
@@ -19,7 +19,7 @@
     
     <script>
         //define map for calling later and set lat, long
-        var map = L.map('map').setView([53.153, -6.909], 14);
+        var map = L.map('map').setView([53.153, -6.909], 15);
 
         //giving map an Open Street Map tilelayer
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -46,9 +46,9 @@
 
       //add a polygon
       var polygon = L.polygon([
-       [53.148299, -6.906836],
-       [53.148435, -6.906316],
-       [53.147929, -6.906348]
+       [53.149358, -6.907574],
+       [53.148373, -6.904828],
+       [53.147395, -6.906029]
        ]).addTo(map);
       polygon.bindPopup("Solas Bride Centre and Hermitages");
       
