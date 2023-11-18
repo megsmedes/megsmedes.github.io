@@ -40,7 +40,7 @@
 		a { text-decoration: none; color: inherit; }
 	</style>
 
-<script>
+<s<script>
 
         // the document ready wraps our javascript
 	// to make sure that everything loads in the 
@@ -91,8 +91,8 @@
 			fillOpacity : 0.7
 			};
 	    		return styleReturn;
-			}
-	})
+		}
+	
     
 		// let's add the Denver ACS data -- ##4 here
 		 $.getJSON('./acs_denver_2021.geojson', function(data) {
@@ -115,12 +115,10 @@
 		// let's try to add some remote DRCOG data
 		$.getJSON('https://data.colorado.gov/api/geospatial/trm9-dm4m?method=export&format=GeoJSON', function(data) {
 			newLayer = L.geoJSON(data);
-			layerControl.addOverlay(newLayer, "Highway Markers");
-		});
-
-
+			layerControl.addOverlay(newLayer, "Highway Markers";
+	
 	// end document ready
-	});
+		});
 
 </script>
 </head>
