@@ -105,8 +105,8 @@
 					{ style: style1,
 					   onEachFeature: function (feature, layer) {
 						layer.bindPopup("Percent of Adults in Graduate School: " +
-						feature.properties.GRADUATE_SCHOOL / 
-						       		(feature.properties.TTL_POPULATION_ALL - feature.properties.AGELESS18) * 100 + '%');		
+						round(feature.properties.GRADUATE_SCHOOL / 
+						       		(feature.properties.TTL_POPULATION_ALL - feature.properties.AGELESS18) * 100) + '%');		
 					   } 
 					}).addTo(map);
 
