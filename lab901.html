@@ -78,12 +78,12 @@
 		//Create a function called style1
 		function style1 (feature){
 			d = feature.properties.GRADUATE_SCHOOL / (feature.properties.TTL_POPULATION_ALL - feature.properties.AGELESS18) * 100;
-			answer = d > 84 ? '#800026' : 
-				d > 70 ? '#DB0026' : 
-				d > 56 ? '#E31A1C' : 
-				d > 42 ? '#FC4E2A' : 
-				d > 28 ? '#FD8D3C' : 
-				d > 14 ? '#FEB24C' : 
+			answer = d > 7 ? '#800026' : 
+				d > 6 ? '#DB0026' : 
+				d > 5 ? '#E31A1C' : 
+				d > 4 ? '#FC4E2A' : 
+				d > 3 ? '#FD8D3C' : 
+				d > 2 ? '#FEB24C' : 
 				d > 1 ? '#FED976' : 
 					'#FFEDA0'; //for everything else
 				styleReturn = {
