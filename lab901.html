@@ -77,7 +77,7 @@
 
 		//Create a function called style1
 		function style1 (feature){
-			d = round((feature.properties.GRADUATE_SCHOOL / (feature.properties.TTL_POPULATION_ALL - feature.properties.AGELESS18) * 100), 2);
+			d = feature.properties.GRADUATE_SCHOOL / (feature.properties.TTL_POPULATION_ALL - feature.properties.AGELESS18) * 100;
 			answer = d > 7 ? '#800026' : 
 				d > 6 ? '#DB0026' : 
 				d > 5 ? '#E31A1C' : 
@@ -105,8 +105,8 @@
 					{ style: style1,
 					   onEachFeature: function (feature, layer) {
 						layer.bindPopup("Percent of Adults in Graduate School: " +
-						round((feature.properties.GRADUATE_SCHOOL / 
-						       		(feature.properties.TTL_POPULATION_ALL - feature.properties.AGELESS18) * 100), 2) + '%');		
+						feature.properties.GRADUATE_SCHOOL / 
+						       		(feature.properties.TTL_POPULATION_ALL - feature.properties.AGELESS18) * 100 + '%');		
 					   } 
 					}).addTo(map);
 
