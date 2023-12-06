@@ -92,7 +92,7 @@
 
 		//Create a function called style1
 		function style1 (feature){
-			d = feature.properties.White / (feature.properties.Total_population) * 100;
+			d = feature.properties.F________White / (feature.properties.F____Total_population2) * 100;
 			answer = d > 3500 ? '#800026' : 
 				d > 3000 ? '#DB0026' : 
 				d > 2500 ? '#E31A1C' : 
@@ -120,8 +120,8 @@
 					{ style: style1,
 					   onEachFeature: function (feature, layer) {
 						layer.bindPopup("Number of White People" +
-						feature.properties.White / 
-						       		(feature.properties.Total_population) * 100 + '%');		
+						feature.properties.F________White / 
+						       		(feature.properties.F____Total_population2) * 100 + '%');		
 					   } 
 					}).addTo(map);
 
