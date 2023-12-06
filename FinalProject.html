@@ -114,7 +114,7 @@
 		}
 		
 		// let's add the Jeffco ACS data -- ##4 here
-		 $.getJSON('./jeffcoCensus.geojson', function(data) {
+		 $.getJSON('./Jeffco_Census.geojson', function(data) {
 			 //convert file (data) into a layer
 			 jeffcoCensus = L.geoJSON(data,
 					{ style: style1,
