@@ -113,20 +113,20 @@
 
 		}
 		
-		// let's add the Denver ACS data -- ##4 here
-		 $.getJSON('./acs_denver_2021.geojson', function(data) {
+		// let's add the Jeffco ACS data -- ##4 here
+		 $.getJSON('./jeffcoCensus.geojson', function(data) {
 			 //convert file (data) into a layer
-			 acsDenver2021Layer = L.geoJSON(data,
+			 jeffcoCensus = L.geoJSON(data,
 					{ style: style1,
 					   onEachFeature: function (feature, layer) {
-						layer.bindPopup("Percent of Adults in Graduate School: " +
-						feature.properties.GRADUATE_SCHOOL / 
-						       		(feature.properties.TTL_POPULATION_ALL - feature.properties.AGELESS18) * 100 + '%');		
+						layer.bindPopup("Number of White People" +
+						feature.properties.White / 
+						       		(feature.properties.Total_population - feature.properties.AGELESS18) * 100 + '%');		
 					   } 
 					}).addTo(map);
 
 			 //move the map to the area of the data
-			 map.panTo(acsDenver2021Layer.getBounds().getCenter());
+			 map.panTo(jeffcoCensus.getBounds().getCenter());
 
 			 //add the map to the layer controls
 			 layerControl.addOverlay(acsDenver2021Layer, "Census 2021");
