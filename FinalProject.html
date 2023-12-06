@@ -93,10 +93,10 @@
 		//Create a function called style1
 		function style1 (feature){
 			d = feature.properties.F________White / (feature.properties.F____Total_population2) * 100;
-			answer = d > 68 ? '#800026' : 
-				d > 77 ? '#DB0026' : 
-				d > 83 ? '#E31A1C' : 
-				d > 86 ? '#FC4E2A' : 
+			answer = d > 42 ? '#800026' : 
+				d > 60 ? '#DB0026' : 
+				d > 73 ? '#E31A1C' : 
+				d > 83 ? '#FC4E2A' : 
 				d > 90 ? '#FD8D3C' : 
 					'#FFEDA0'; //for everything else
 				styleReturn = {
@@ -118,7 +118,7 @@
 					{ style: style1,
 					   onEachFeature: function (feature, layer) {
 						layer.bindPopup("Number of White People" +
-						feature.properties.F________White / 
+						feature.properties.F____________White_alone / 
 						       		(feature.properties.F____Total_population2) * 100 + '%');		
 					   } 
 					}).addTo(map);
@@ -137,7 +137,7 @@ legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend');
 	 colors = ['#FFEDA0','#FED976','#FEB24C' ,'#FD8D3C','#FC4E2A','#E31A1C',
                  '#BD0026','#800026'];
-       labels = ['68 - 77 %', ' 77 - 83 %', '83-85 %', '85 - 90 %', '90 - 100 %', 
+       labels = ['42 -60 %', ' 60 - 73 %', '73-83 %', '83 - 90 %', '90 - 100 %', 
                  '< 68 %' ];
     // note that you'll want to change these values to match your classes
 
@@ -162,9 +162,9 @@ legend.addTo(map);
 
 
 <div id="header">
-	<h1><a href="https://www.census.gov/programs-surveys/acs">Denver 2021 American Community Survey (Census) data</a></h1>
-	<h2> Percent of Adults Enrolled in Graduate School </h2>
-	<p>Data from <a href="https://denvergov.org/opendata/dataset/city-and-county-of-denver-american-community-survey-blk-grp-2017-2021">Denver Open Data</a></p>
+	<h1><a href="https://www.census.gov/geographies/reference-maps/2020/geo/2020pl-maps/2020-census-tract.html">Tigerline Census Tracts for Jefferson County, Colorado, U.S. Census Bureau</a></h1>
+	<h2> Percent of White Population </h2>
+	<p>Data from <a href="https://data.census.gov/table/ACSDP5Y2021.DP05?g=040XX00US08_050XX00US08059,08059$1400000&d=ACS%205-Year%20Estimates%20Data%20Profiles">2021 American Community Survey for Jefferson County, CO: Demographic and Housing Estimates</a></p>
 </div>
 <div id="map"></div>
 
