@@ -93,11 +93,11 @@
 		//Create a function called style1
 		function style1 (feature){
 			d = (feature.properties.F________Hispanic_or_Latino__of / feature.properties.F____Total_population2) * 100;
-			answer = d > 0 ? '#DB0026' : 
-				d > 6 ? '#E31A1C' : 
-				d > 10 ? '#FC4E2A' : 
-				d > 17 ? '#FD8D3C' : 
-				d >  30? '#FFEDA0' : 
+			answer = d < 6 ? '#DB0026' : 
+				d < 10 ? '#E31A1C' : 
+				d < 17 ? '#FC4E2A' : 
+				d < 30 ? '#FD8D3C' : 
+				d < 54 ? '#FFEDA0' : 
 					'#800026'; //for everything else
 				styleReturn = {
 					fillColor : answer,
@@ -118,7 +118,7 @@
 					{ style: style1,
 					   onEachFeature: function (feature, layer) {
 						layer.bindPopup("Percent of White People  " +
-						(feature.properties.F____________White_alone / 
+						(feature.properties.F________Hispanic_or_Latino__of / 
 						       		feature.properties.F____Total_population2) * 100 + '%');		
 					   } 
 					}).addTo(map);
