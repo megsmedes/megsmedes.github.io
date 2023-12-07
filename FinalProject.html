@@ -149,8 +149,8 @@
     		fillOpacity: 0.8
 	};
 
-var. latlng = L.lantlng(-105.1, 39.6)		
-L.geoJSON(/BCHSPoint.geojson, {
+var. latlng = L.latlng(-105.1, 39.6)		
+L.geoJSON("/BCHSPoint.geojson", {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, BCHSMarker);}}).addTo(map);
 		
