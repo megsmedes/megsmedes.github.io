@@ -93,7 +93,7 @@
 		//Create a function called style1
 		function style1 (feature){
 			d = (feature.properties.F________Hispanic_or_Latino__of / feature.properties.F____Total_population2) * 100;
-			answer = d >  ? '#DB0026' : 
+			answer = d > 0 ? '#DB0026' : 
 				d > 6 ? '#E31A1C' : 
 				d > 10 ? '#FC4E2A' : 
 				d > 17 ? '#FD8D3C' : 
