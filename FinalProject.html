@@ -92,12 +92,17 @@
 
 		//Create a function called style1
 		function style1 (feature){
-			d = (feature.properties.F________Hispanic_or_Latino__of / feature.properties.F____Total_population2) * 100;
-			answer = d < 6 ? '#DB0026' : 
-				d < 10 ? '#E31A1C' : 
-				d < 17 ? '#FC4E2A' : 
-				d < 30 ? '#FD8D3C' : 
-				d < 54 ? '#FFEDA0' : 
+			d = (feature.properties.F________Hispanic_or_Latino__of + 
+			     feature.properties.F____________Black_or_African_A +
+			     feature.properties.F____________American_Indian_an +
+			     feature.properties.F____________Asian + 
+			     feature.properties.F____________Native_Hawaiian_an) 
+				/ feature.properties.F____Total_population3 * 100;
+			answer = d < 9 ? '#DB0026' : 
+				d < 16 ? '#E31A1C' : 
+				d < 25 ? '#FC4E2A' : 
+				d < 38 ? '#FD8D3C' : 
+				d < 57 ? '#FFEDA0' : 
 					'#800026'; //for everything else
 				styleReturn = {
 					fillColor : answer,
@@ -118,8 +123,12 @@
 					{ style: style1,
 					   onEachFeature: function (feature, layer) {
 						layer.bindPopup("Percent of White People  " +
-						(feature.properties.F________Hispanic_or_Latino__of / 
-						       		feature.properties.F____Total_population2) * 100 + '%');		
+						((feature.properties.F________Hispanic_or_Latino__of + 
+			    				 feature.properties.F____________Black_or_African_A +
+			    				 feature.properties.F____________American_Indian_an +
+			    				 feature.properties.F____________Asian + 
+			    				 feature.properties.F____________Native_Hawaiian_an) 
+							/ feature.properties.F____Total_population3 * 100 + '%');		
 					   } 
 					}).addTo(map);
 
@@ -137,7 +146,7 @@ legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend');
 	 colors = ['#800026',
                  '#DB0026','#E31A1C','#FC4E2A','#FD8D3C','#FFEDA0'];
-       labels = ['< 0 %', '0 - 7 %', '7 - 10 %', '10 - 17 %', '17 - 30 %', '30 - 54 %' 
+       labels = ['< 0 %', '0 - 9 %', '9 - 16 %', '16 - 25 %', '25 - 38 %', '38 - 57 %' 
                  ];
     // note that you'll want to change these values to match your classes
 
