@@ -92,12 +92,12 @@
 
 		//Create a function called style1
 		function style1 (feature){
-			d = (feature.properties.F________Hispanic_or_Latino__of + 
+			d = ((feature.properties.F________Hispanic_or_Latino__of + 
 			     feature.properties.F____________Black_or_African_A +
 			     feature.properties.F____________American_Indian_an +
 			     feature.properties.F____________Asian + 
 			     feature.properties.F____________Native_Hawaiian_an) 
-				/ feature.properties.F____Total_population3 * 100;
+				/ feature.properties.F____Total_population3) * 100;
 			answer = d < 9 ? '#DB0026' : 
 				d < 16 ? '#E31A1C' : 
 				d < 25 ? '#FC4E2A' : 
@@ -122,13 +122,13 @@
 			 jeffcoCensus = L.geoJSON(data,
 					{ style: style1,
 					   onEachFeature: function (feature, layer) {
-						layer.bindPopup("Percent of White People  " +
+						layer.bindPopup("Percent of Non-white People  " +
 						((feature.properties.F________Hispanic_or_Latino__of + 
 			    				 feature.properties.F____________Black_or_African_A +
 			    				 feature.properties.F____________American_Indian_an +
 			    				 feature.properties.F____________Asian + 
 			    				 feature.properties.F____________Native_Hawaiian_an) 
-							/ feature.properties.F____Total_population3 * 100 + '%');		
+							/ feature.properties.F____Total_population3) * 100 + '%');		
 					   } 
 					}).addTo(map);
 
