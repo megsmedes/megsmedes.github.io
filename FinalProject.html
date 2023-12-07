@@ -22,17 +22,17 @@
 		
 		#map { width:100%; height: 70%; }
 		
-		h1 { color: #3293a8;
+		h1 { color: #006d2c;
 		     font-family: "Calibri", serif;
 		     font-size: 20px;
 		    }
 
-		h2 { color: #3293a8;
+		h2 { color: #006d2c;
 		     font-family: "Calibri", serif;
 		   }
 		
-		p { font: serif 10px;
-		    color: #3293a8;
+		p { font: "Calibri", serif 10px;
+		    color: #006d2c;
 		  }
 		
 		#header {
@@ -98,12 +98,12 @@
 			     feature.properties.F____________Asian + 
 			     feature.properties.F____________Native_Hawaiian_an) 
 				/ feature.properties.F____Total_population3) * 100;
-			answer = d < 9 ? '#DB0026' : 
-				d < 16 ? '#E31A1C' : 
-				d < 25 ? '#FC4E2A' : 
-				d < 38 ? '#FD8D3C' : 
-				d < 57 ? '#FFEDA0' : 
-					'#800026'; //for everything else
+			answer = d < 9 ? '#c7e9c0' : 
+				d < 16 ? '#a1d99b' : 
+				d < 25 ? '#74c476' : 
+				d < 38 ? '#31a354' : 
+				d < 57 ? '#006d2c' : 
+					'#edf8e9'; //for everything else
 				styleReturn = {
 					fillColor : answer,
 					weight : 1,
@@ -144,13 +144,13 @@
 legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info legend');
-	 colors = ['#800026',
-                 '#DB0026','#E31A1C','#FC4E2A','#FD8D3C','#FFEDA0'];
+	 colors = ['#edf8e9',
+                 '#c7e9c0','#a1d99b','#74c476','#31a354','#006d2c'];
        labels = ['< 0 %', '0 - 9 %', '9 - 16 %', '16 - 25 %', '25 - 38 %', '38 - 57 %' 
                  ];
     // note that you'll want to change these values to match your classes
 
-    div.innerHTML = '<h2>% White Population </h2><br>';
+    div.innerHTML = '<h2>% Non white Population </h2><br>';
     // loop through our density intervals and generate a label with a colored square for each interval
     for (var i = 0; i < colors.length; i++) {
         div.innerHTML += '<i style="background:' + colors[i] + '"></i> ' + labels[i] + '<br>';
@@ -171,9 +171,9 @@ legend.addTo(map);
 
 
 <div id="header">
-	<h1><a href="https://www.census.gov/geographies/reference-maps/2020/geo/2020pl-maps/2020-census-tract.html">Tigerline Census Tracts for Jefferson County, Colorado, U.S. Census Bureau</a></h1>
-	<h2> Percent of White Population </h2>
+	<h1> Why is Bear Creek High School so Diverse? </h2>
 	<p>Data from <a href="https://data.census.gov/table/ACSDP5Y2021.DP05?g=040XX00US08_050XX00US08059,08059$1400000&d=ACS%205-Year%20Estimates%20Data%20Profiles">2021 American Community Survey for Jefferson County, CO: Demographic and Housing Estimates</a></p>
+	<p><a href="https://www.census.gov/geographies/reference-maps/2020/geo/2020pl-maps/2020-census-tract.html">Tigerline Census Tracts for Jefferson County, Colorado, U.S. Census Bureau</a></p>
 </div>
 <div id="map"></div>
 
