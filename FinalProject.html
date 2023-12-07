@@ -139,6 +139,18 @@
 			 layerControl.addOverlay(jeffcoCensus, "Census 2021");
 		 });
 
+ var BCHSpoint;
+    $.getJSON("BearCreekHighSchPnt.json", function(json) {
+        // add GeoJSON layer to the map once the file is loaded
+        BCHSpoint = L.geoJson(json,{
+              onEachFeature: function (feature, layer) {
+                layer.bindPopup("Bear Creek High School");
+              }
+        })
+        layerMenu.addOverlay(BCHSpoint, "Bear Creek High School");
+    });
+		
+
 		var legend = L.control({position: 'bottomright'});
 
 legend.onAdd = function (map) {
