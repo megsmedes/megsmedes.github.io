@@ -153,7 +153,17 @@
 var overlaymaps = { };
 var layerMenu = L.control.layers(overlaymaps).addTo(map);
 
- 
+function style2 (feature){
+	styleReturn = {fillColor : FFAA00,
+			weight : 1,
+			opacity: 1,
+			color: 'grey', //border
+			dashArray : '3', //style of dash
+			fillOpacity : 0.7
+				};
+				return styleReturn;
+
+		}
 var BCHSMarker;
     $.getJSON("BCHSPoint.geojson", function(json) {
         //add GeoJSON layer to the map once the file is loaded
@@ -168,7 +178,7 @@ var BCHSMarker;
 var BCHSBoundary;
     $.getJSON("BCHS_Boundary.geojson", function(json) {
         //add GeoJSON layer to the map once the file is loaded
-        BCHSBoundary = L.geoJson(json,{
+        BCHSBoundary = L.geoJson(json,{style: style2,
               onEachFeature: function (feature, layer) {
                 layer.bindPopup("Bear Creek High School Neighborhood Boundary");
               }
