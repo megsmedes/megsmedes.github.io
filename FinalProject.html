@@ -163,6 +163,17 @@ var BCHSMarker;
         layerMenu.addOverlay(BCHSMarker, "Bear Creek High School");
     });
 
+var BCHSBoundary;
+    $.getJSON("BCHS_Boundary.geojson", function(json) {
+        //add GeoJSON layer to the map once the file is loaded
+        BCHSBoundary = L.geoJson(json,{
+              onEachFeature: function (feature, layer) {
+                layer.bindPopup("Bear Creek High School Neighborhood Boundary");
+              }
+        })
+        layerMenu.addOverlay(BCHSBoundary, "Bear Creek High School Boundary");
+    });
+
 
 //var. latlng = L.latlng(-105.1, 39.6)		
 //L.geoJSON("BCHSPoint.geojson", {
