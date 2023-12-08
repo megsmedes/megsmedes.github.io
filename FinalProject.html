@@ -138,14 +138,14 @@
 			    				 feature.properties.F____________American_Indian_an +
 			    				 feature.properties.F____________Asian + 
 			    				 feature.properties.F____________Native_Hawaiian_an) 
-							/ feature.properties.F____Total_population3) * 100 + '%')<br> 
-							("Percent Hispanic Population  " + (feature.properties.F________Hispanic_or_Latino__of 
-							/ feature.properties.F____Total_population3) * 100 + '%')<br> 
-			 				("Percent Asian Population  " + (feature.properties.F____________Asian  
-				 			/ feature.properties.F____Total_population3) * 100 + '%')<br> 
-							("Percent Black or African American Population  " + (feature.properties.F____________Black_or_African_A
-			 				/ feature.properties.F____Total_population3) * 100 + '%')<br> 
-							("Percent Indigenous Population  " + ((feature.properties.F____________American_Indian_an + 
+							/ feature.properties.F____Total_population3) * 100 + '%<br>' + 
+							"Percent Hispanic Population  " + (feature.properties.F________Hispanic_or_Latino__of 
+							/ feature.properties.F____Total_population3) * 100 + ''%<br>' +
+							"Percent Asian Population  " + (feature.properties.F____________Asian  
+				 			/ feature.properties.F____Total_population3) * 100 + '%<br>' +
+							"Percent Black or African American Population  " + (feature.properties.F____________Black_or_African_A
+			 				/ feature.properties.F____Total_population3) * 100 + '%<br>' + 
+							"Percent Indigenous Population  " + ((feature.properties.F____________American_Indian_an + 
 							feature.properties.F____________Native_Hawaiian_an) 
 							/ feature.properties.F____Total_population3) * 100 + '%');
 														    		
@@ -163,16 +163,6 @@
 var overlaymaps = { };
 var layerMenu = L.control.layers(overlaymaps).addTo(map);
 
-function style2 (feature){
-	styleReturn = {fillColor : FFAA00,
-			weight : 1,
-			opacity: 1,
-			color: 'grey', //border
-			dashArray : '3', //style of dash
-			fillOpacity : 0.7
-				};
-				return styleReturn;
-
 		}
 var BCHSMarker;
     $.getJSON("BCHSPoint.geojson", function(json) {
@@ -188,7 +178,7 @@ var BCHSMarker;
 var BCHSBoundary;
     $.getJSON("BCHS_Boundary.geojson", function(json) {
         //add GeoJSON layer to the map once the file is loaded
-        BCHSBoundary = L.geoJson(json,{style: style2,
+        BCHSBoundary = L.geoJson(json,{
               onEachFeature: function (feature, layer) {
                 layer.bindPopup("Bear Creek High School Neighborhood Boundary");
               }
@@ -197,11 +187,6 @@ var BCHSBoundary;
     });
 
 
-//var. latlng = L.latlng(-105.1, 39.6)		
-//L.geoJSON("BCHSPoint.geojson", {
-    //pointToLayer: function (feature, latlng) {
-        //return L.circleMarker(latlng, BCHSMarker);}}).addTo(map);
-		
 
 		var legend = L.control({position: 'bottomright'});
 
