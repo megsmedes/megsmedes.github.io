@@ -57,6 +57,14 @@
     			opacity: 0.8;
 			}
 
+		#BCHSMarker = {
+    		radius: 10,
+   		fillColor: "#ff7800",
+    		color: "#000",
+   		weight: 1,
+   	 	opacity: 1,
+    		fillOpacity: 0.8
+	};	
 	</style>
 
 <script>
@@ -144,31 +152,22 @@
 //var layerMenu = L.control.layers(overlaymaps).addTo(map);
 
  
-//var BCHSMarker;
-    //$.getJSON("BCHSPoint.geojson", function(json) {
-        // add GeoJSON layer to the map once the file is loaded
-        //BCHSMarker = L.geoJson(json,{
-             // onEachFeature: function (feature, layer) {
-             //   layer.bindPopup("Bear Creek High School");
-             // }
-       // })
-       // layerMenu.addOverlay(BCHSMarker, "Bear Creek High School");
- //   });
+var BCHSMarker;
+    $.getJSON("BCHSPoint.geojson", function(json) {
+         add GeoJSON layer to the map once the file is loaded
+        BCHSMarker = L.geoJson(json,{
+              onEachFeature: function (feature, layer) {
+                layer.bindPopup("Bear Creek High School");
+              }
+        })
+        layerMenu.addOverlay(BCHSMarker, "Bear Creek High School");
+    });
 
 
-var BCHSMarker = {
-    		radius: 10,
-   		fillColor: "#ff7800",
-    		color: "#000",
-   		weight: 1,
-   	 	opacity: 1,
-    		fillOpacity: 0.8
-	};	
-
-var. latlng = L.latlng(-105.1, 39.6)		
-L.geoJSON("BCHSPoint.geojson", {
-    pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, BCHSMarker);}}).addTo(map);
+//var. latlng = L.latlng(-105.1, 39.6)		
+//L.geoJSON("BCHSPoint.geojson", {
+    //pointToLayer: function (feature, latlng) {
+        //return L.circleMarker(latlng, BCHSMarker);}}).addTo(map);
 		
 
 		var legend = L.control({position: 'bottomright'});
