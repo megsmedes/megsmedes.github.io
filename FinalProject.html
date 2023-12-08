@@ -59,7 +59,7 @@
 
 		#BCHSMarker = {
     		radius: 10,
-   		fillColor: "#ff7800",
+   		fillColor: "#FF9700",
     		color: "#000",
    		weight: 1,
    	 	opacity: 1,
@@ -154,7 +154,7 @@
  
 var BCHSMarker;
     $.getJSON("BCHSPoint.geojson", function(json) {
-         add GeoJSON layer to the map once the file is loaded
+        //add GeoJSON layer to the map once the file is loaded
         BCHSMarker = L.geoJson(json,{
               onEachFeature: function (feature, layer) {
                 layer.bindPopup("Bear Creek High School");
